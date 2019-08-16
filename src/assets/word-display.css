@@ -1,0 +1,11 @@
+.green-letter {
+  color: green;
+}
+
+.red-letter {
+  color: red;
+}
+
+.green-letter, .red-letter {
+  font-weight: 800;
+}
