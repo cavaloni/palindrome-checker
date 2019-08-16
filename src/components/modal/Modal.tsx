@@ -19,11 +19,11 @@ const Modal: React.FC<ModalProps> = props => {
 				<h3>
 					{isPalindrome
 						? "Neat-o! Its a certified palindrome!"
-						: "Wel... it might be a cool word, but it  ain't a pali"}
+						: "Wel... it might be a cool word, but it  ain't a true pali"}
 				</h3>
 			</div>
 		</div>
-	);
+	);	
 };
 
 export default Modal;

@@ -18,12 +18,14 @@ const App: React.FC = () => {
 		const newResults: Results[] = [];
 		let newIsPalindrome = true;
 
+		const wordToCheck = word.replace(/[^A-Z0-9]/gi, "");
 		let beg = 0;
-		let end = word.length - 1;
+		let end = wordToCheck.length - 1;
+
 
 		while (beg <= end) {
-			const firstLetter = word[beg];
-			const secondLetter = word[end];
+			const firstLetter = wordToCheck[beg];
+			const secondLetter = wordToCheck[end];
 			if (firstLetter === secondLetter || beg === end) {
 				newResults[beg] = { letter: firstLetter, passed: true };
 				newResults[end] = { letter: secondLetter, passed: true };
