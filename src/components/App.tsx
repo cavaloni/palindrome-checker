@@ -4,6 +4,7 @@ import { Results } from "../types/index";
 import "../assets//App.css";
 
 const App: React.FC = () => {
+	// Type checking is implied within the useState functions
 	const [word, updateWord] = useState("");
 	const [results, updateResults] = useState<Results[]>([]);
 	const [isPalindrome, updatePalindrome] = useState(false);
@@ -18,10 +19,10 @@ const App: React.FC = () => {
 		const newResults: Results[] = [];
 		let newIsPalindrome = true;
 
-		const wordToCheck = word.replace(/[^A-Z0-9]/gi, "");
+		// remove the special characters
+		const wordToCheck = word.replace(/[^A-Z0-9 ]/gi, "");
 		let beg = 0;
 		let end = wordToCheck.length - 1;
-
 
 		while (beg <= end) {
 			const firstLetter = wordToCheck[beg];
