@@ -4,6 +4,13 @@ Uses create-react-app with typescript for speedy development and avoiding overhe
 
 
 ### Starting server
+This assumes that you have Yarn installed <https://yarnpkg.com/en/>
+
+Once installed, run it in the root directory to install dependencies:
+
+`yarn`
+
+Then to start the server, run:
 `yarn start`
 
 This will automatically open a tab in your browser pointed to localhost:3000
